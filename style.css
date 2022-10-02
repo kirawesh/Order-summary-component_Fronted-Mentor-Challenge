@@ -34,7 +34,7 @@ body {
     justify-content: center;
     background: url(images/pattern-background-desktop.svg) no-repeat;
     background-color: var(--pc-PaleBlue);
-    border: 5px solid saddlebrown;
+    border: 0.3125rem solid saddlebrown;
 }
 
 .container {
@@ -55,7 +55,7 @@ body {
 .image-container {
     display: block;
     width: 100%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 1.25rem 1.25rem 0 0;
 }
 
 .order-title {
@@ -70,7 +70,6 @@ body {
     color: var(--nc-DesaturatedBlue);
     line-height: 1.6;
     margin-top: 0.9375rem;
-
 }
 
 
@@ -161,11 +160,11 @@ body {
     color: hsl(228, 45%, 44%);
 }
 
-@media (max-width:500px) {
+@media (max-width:31.25rem) {
 
 
     .container {
-        width: min(330px, 95%);
+        width: min(20.625rem, 95%);
         transition: all 1s ease;
     }
 
@@ -178,29 +177,29 @@ body {
 
     .order-title {
         font-size: 1.375rem;
-        margin-top: 34px;
+        margin-top: 2.125rem;
     }
 
     .plan-container {
-        padding: 18px 25px;
+        padding: 1.125rem 1.5625rem;
     }
 
     .plan-title,
     .plan-price {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .proceed-container {
-        margin-top: 22px;
+        margin-top: 1.375rem;
     }
 
     .cancel-container {
-        margin: 24px 0 32px;
+        margin: 1.5rem 0 2rem;
     }
 
 }
 
-@media (max-width:321px){
+@media (max-width:20rem) {
     .plan-container {
         flex-direction: column;
     }
