@@ -34,7 +34,6 @@ body {
     justify-content: center;
     background: url(images/pattern-background-desktop.svg) no-repeat;
     background-color: var(--pc-PaleBlue);
-    border: 0.3125rem solid saddlebrown;
 }
 
 .container {
