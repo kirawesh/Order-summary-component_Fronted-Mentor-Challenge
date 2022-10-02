@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Red+Hat+Display:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+:root {
+    /* colors */
+    --pc-PaleBlue: hsl(225, 100%, 94%);
+    --pc-BrightBlue: hsl(245, 75%, 52%);
+    --nc-VeryPaleBlue: hsl(225, 100%, 98%);
+    --nc-DesaturatedBlue: hsl(224, 23%, 55%);
+    --nc-DarkBlue: hsl(223, 47%, 23%);
+    --nc-White: hsl(0, 0%, 100%);
+    --nc-LightBlue: hsl(245, 83%, 68%);
+
+    /* typography */
+    --ff-RedHatDisplay: 'Red Hat Display',
+        sans-serif;
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-RedHatDisplay);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(images/pattern-background-desktop.svg) no-repeat;
+    background-color: var(--pc-PaleBlue);
+}
+
+.container {
+    margin: auto;
+    text-align: center;
+    background: var(--nc-White);
+    width: 450px;
+    border-radius: 20px;
+}
+
+.order,
+.plan,
+.proceed,
+.cancel {
+    padding: 0 48px;
+}
+
+.order-title {
+    font-size: 28px;
+    font-weight: var(--fw-900);
+    color: var(--nc-DarkBlue);
+    margin-top: 48px;
+}
+
+.order-description {
+    font-weight: var(--fw-500);
+    color: var(--nc-DesaturatedBlue);
+    margin-top: 15px;
+
+}
+
+.image-container {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.plan-container {
+    background: var(--nc-VeryPaleBlue);
+    display: flex;
+    gap: 21px;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.plan-container>:nth-child(2) {
+    text-align: start;
+}
+
+.plan-container>:nth-child(3) {
+    text-align: end;
+    flex-grow: 2;
+    font-size: 14px;
+    color: var(--pc-BrightBlue);
+}
+
+.plan-title {
+    font-size: 16px;
+    font-weight: var(--fw-900);
+    color: var(--nc-DarkBlue);
+}
+
+.plan-price {
+    font-size: 16px;
+    font-weight: var(--fw-500);
+    color: var(--nc-DesaturatedBlue);
+}
+
+.change-button {
+    font-weight: var(--fw-700);
+}
+
+.change-button:hover {
+    text-decoration: none;
+    color: var(--nc-LightBlue);
+}
+
+.proceed-container {
+    background: var(--pc-BrightBlue);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 33px;
+    box-shadow: 0 20px 20px hsla(245, 83%, 68%, 0.2);
+}
+
+.proceed-container:hover{
+    background: var(--nc-LightBlue);
+}
+
+.proceed-button {
+    color: var(--nc-White);
+    text-decoration: none;
+    font-weight: var(--fw-700);
+}
+
+.cancel-container {
+    margin: 33px 0 50px;
+}
+
+.cancel-button {
+    color: var(--nc-DesaturatedBlue);
+    font-weight: var(--fw-700);
+    text-decoration: none;
+}
+
+.cancel-button:hover {
+    color: var(--nc-DarkBlue);
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
