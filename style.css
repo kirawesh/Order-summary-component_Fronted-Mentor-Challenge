@@ -31,52 +31,57 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background: url(images/pattern-background-desktop.svg) no-repeat;
     background-color: var(--pc-PaleBlue);
+    border: 5px solid saddlebrown;
 }
 
 .container {
     margin: auto;
     text-align: center;
     background: var(--nc-White);
-    width: 450px;
-    border-radius: 20px;
+    width: min(28.125rem, 85%);
+    border-radius: 1.25rem;
 }
 
 .order,
 .plan,
 .proceed,
 .cancel {
-    padding: 0 48px;
+    padding: 0 3rem;
+}
+
+.image-container {
+    display: block;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
 }
 
 .order-title {
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: var(--fw-900);
     color: var(--nc-DarkBlue);
-    margin-top: 48px;
+    margin-top: 3rem;
 }
 
 .order-description {
     font-weight: var(--fw-500);
     color: var(--nc-DesaturatedBlue);
-    margin-top: 15px;
+    line-height: 1.6;
+    margin-top: 0.9375rem;
 
 }
 
-.image-container {
-    width: 100%;
-    border-radius: 20px 20px 0 0;
-}
 
 .plan-container {
     background: var(--nc-VeryPaleBlue);
     display: flex;
-    gap: 21px;
+    gap: 1.3125rem;
     align-items: center;
-    margin-top: 20px;
-    border-radius: 10px;
-    padding: 25px;
+    margin-top: 1.25rem;
+    border-radius: 0.625rem;
+    padding: 1.5625rem;
 }
 
 .plan-container>:nth-child(2) {
@@ -86,18 +91,18 @@ body {
 .plan-container>:nth-child(3) {
     text-align: end;
     flex-grow: 2;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--pc-BrightBlue);
 }
 
 .plan-title {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--fw-900);
     color: var(--nc-DarkBlue);
 }
 
 .plan-price {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--fw-500);
     color: var(--nc-DesaturatedBlue);
 }
@@ -113,43 +118,91 @@ body {
 
 .proceed-container {
     background: var(--pc-BrightBlue);
-    border-radius: 10px;
-    padding: 15px;
-    margin-top: 33px;
-    box-shadow: 0 20px 20px hsla(245, 83%, 68%, 0.2);
+    border-radius: 0.625rem;
+    padding: 0.9375rem 0;
+    margin-top: 2.0625rem;
+    box-shadow: 0 1.25rem 1.25rem hsla(245, 83%, 68%, 0.2);
 }
 
-.proceed-container:hover{
+.proceed-container:hover {
     background: var(--nc-LightBlue);
 }
 
 .proceed-button {
     color: var(--nc-White);
     text-decoration: none;
+    font-size: 1rem;
+    background: none;
     font-weight: var(--fw-700);
 }
 
 .cancel-container {
-    margin: 33px 0 50px;
+    margin: 2.0625rem 0 3.125rem;
 }
 
 .cancel-button {
     color: var(--nc-DesaturatedBlue);
     font-weight: var(--fw-700);
     text-decoration: none;
+    font-size: 1rem;
+    background: none;
 }
 
 .cancel-button:hover {
     color: var(--nc-DarkBlue);
 }
 
-
-
 .attribution {
-    font-size: 11px;
+    font-size: 0.6875rem;
     text-align: center;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width:500px) {
+
+
+    .container {
+        width: min(330px, 95%);
+        transition: all 1s ease;
+    }
+
+    .order,
+    .plan,
+    .proceed,
+    .cancel {
+        padding: 0 1.5rem;
+    }
+
+    .order-title {
+        font-size: 1.375rem;
+        margin-top: 34px;
+    }
+
+    .plan-container {
+        padding: 18px 25px;
+    }
+
+    .plan-title,
+    .plan-price {
+        font-size: 14px;
+    }
+
+    .proceed-container {
+        margin-top: 22px;
+    }
+
+    .cancel-container {
+        margin: 24px 0 32px;
+    }
+
+}
+
+@media (max-width:321px){
+    .plan-container {
+        flex-direction: column;
+    }
+
 }
